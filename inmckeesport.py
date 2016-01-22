@@ -1,32 +1,22 @@
 FULLDATA = 24569
 SAMPLEDATA = 202
-
+import time
 import csv
 dataCSV = open('PittAreaRawData.csv')
 dataRead = csv.reader(dataCSV)
 dataList = list(dataRead)
 
-def howManyRepeats(i, r):
-	if dataList[i][2] == dataList[i+r+1][2]:
-		r += 1
-		howManyRepeats(i, r)
-	else:
-		return r
-		
-
 #geocoding test
 #requires pip install geopy from terminal
 from geopy.geocoders import Nominatim
 geolocator = Nominatim()
-jso = open('MckeesportJstring.json', 'w')
-McSpread = open('MckeesportSpread.csv', 'w')
-jso.write("var addressLocations = \n[\n")
-McSpread.write("Account, Owners, Input Address, Output Number, Output Street, Output City, Output County, Output Zipcode, Output Country, Description, CDT, DQT, Interest, Latitude, Longitude, Index, Comments")
+McSpread = open('MckeesportSpread.csv', 'a')
+#McSpread.write("Account, Owners, Input Address, Output Number, Output Street, Output City, Output County, Output Zipcode, Output Country, Description, CDT, DQT, Interest, Latitude, Longitude, Index, Comments")
 
 
-for i in range(5000, 5200):
+for i in range(1677, FULLDATA): #skipping first 55 indices because they have no number and will get mixed in with the geocode returns that are wrong
 	fullAddress = str(dataList[i][2]) + ", Mckeesport, PA"
-	location = geolocator.geocode(fullAddress, timeout=30)
+	location = geolocator.geocode(fullAddress, timeout=60)
 	if location == None:
 		tempP = "index " + str(i) + ": " + dataList[i][2] + " not found in Mckeesport, PA"
 		print(tempP)
@@ -62,6 +52,5 @@ for i in range(5000, 5200):
 		McSpread.write(str(i))
 		McSpread.write(", ")
 		McSpread.write(dataList[i][7])
-jso.write("]")
-jso.close()
+		time.sleep(1)
 McSpread.close()

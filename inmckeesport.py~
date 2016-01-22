@@ -1,12 +1,12 @@
 FULLDATA = 24569
 SAMPLEDATA = 202
-
+import time
 import csv
 dataCSV = open('PittAreaRawData.csv')
 dataRead = csv.reader(dataCSV)
 dataList = list(dataRead)
 
-def howManyRepeats(i, r):
+def howManyRepeats(i, r):#if only referencessssss
 	if dataList[i][2] == dataList[i+r+1][2]:
 		r += 1
 		howManyRepeats(i, r)
@@ -18,15 +18,13 @@ def howManyRepeats(i, r):
 #requires pip install geopy from terminal
 from geopy.geocoders import Nominatim
 geolocator = Nominatim()
-jso = open('MckeesportJstring.json', 'w')
-McSpread = open('MckeesportSpread.csv', 'w')
-jso.write("var addressLocations = \n[\n")
-McSpread.write("Account, Owners, Input Address, Output Number, Output Street, Output City, Output County, Output Zipcode, Output Country, Description, CDT, DQT, Interest, Latitude, Longitude, Index, Comments")
+McSpread = open('MckeesportSpread.csv', 'a')
+#McSpread.write("Account, Owners, Input Address, Output Number, Output Street, Output City, Output County, Output Zipcode, Output Country, Description, CDT, DQT, Interest, Latitude, Longitude, Index, Comments")
 
 
-for i in range(4500, 5000):
+for i in range(1677, FULLDATA): #skipping first 55 indices because they have no number and will get mixed in with the geocode returns that are wrong
 	fullAddress = str(dataList[i][2]) + ", Mckeesport, PA"
-	location = geolocator.geocode(fullAddress, timeout=30)
+	location = geolocator.geocode(fullAddress, timeout=60)
 	if location == None:
 		tempP = "index " + str(i) + ": " + dataList[i][2] + " not found in Mckeesport, PA"
 		print(tempP)
@@ -36,21 +34,6 @@ for i in range(4500, 5000):
 		r = 0
 		repeats = howManyRepeats(i, r)
 		print(tempO)
-		additionalInfo = "Account Number: " + str(dataList[i][0]) + ", Owners: " + str(dataList[i][1]) + ", Description: " + str(dataList[i][3]) + ", CDT: " + str(dataList[i][4]) + ", DQT: " + ", Interest: " + str(dataList[i][5]) + ", Comments: " + str(dataList[i][7])
-		jso.write("\t{ \"address\": \"")
-		jso.write(dataList[i][2])
-		jso.write("\", ")
-		jso.write("\"latitude\": \"")
-		jso.write(str(location.latitude))
-		jso.write("\", \"longitude\": \"")
-		jso.write(str(location.longitude))
-		jso.write("\", \"index\": \"")
-		jso.write(str(i))
-		jso.write("\", \"repeats\": \"")
-		jso.write(str(repeats))
-		jso.write("\", \"additionalInfo\": \"")
-		jso.write(additionalInfo)
-		jso.write("\"},\n")
 		
 		McSpread.write("\n")
 		McSpread.write(dataList[i][0])
@@ -77,6 +60,5 @@ for i in range(4500, 5000):
 		McSpread.write(str(i))
 		McSpread.write(", ")
 		McSpread.write(dataList[i][7])
-jso.write("]")
-jso.close()
+		time.sleep(1)
 McSpread.close()

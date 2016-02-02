@@ -14,9 +14,10 @@ McSpread = open('MckeesportSpread.csv', 'a')
 #McSpread.write("Account, Owners, Input Address, Output Number, Output Street, Output City, Output County, Output Zipcode, Output Country, Description, CDT, DQT, Interest, Latitude, Longitude, Index, Comments")
 
 
-for i in range(1677, FULLDATA): #skipping first 55 indices because they have no number and will get mixed in with the geocode returns that are wrong
+for i in range(24030, FULLDATA): #skipping first 55 indices because they have no number and will get mixed in with the geocode returns that are wrong
 	fullAddress = str(dataList[i][2]) + ", Mckeesport, PA"
 	location = geolocator.geocode(fullAddress, timeout=60)
+	time.sleep(1)
 	if location == None:
 		tempP = "index " + str(i) + ": " + dataList[i][2] + " not found in Mckeesport, PA"
 		print(tempP)
@@ -24,7 +25,6 @@ for i in range(1677, FULLDATA): #skipping first 55 indices because they have no 
 	if dataList[i][2] != dataList[i-1][2]:
 		tempO = "Found! at " + str(location.latitude) + ", " + str(location.longitude) + ", adding to files..."
 		r = 0
-		repeats = howManyRepeats(i, r)
 		print(tempO)
 		
 		McSpread.write("\n")
@@ -52,5 +52,4 @@ for i in range(1677, FULLDATA): #skipping first 55 indices because they have no 
 		McSpread.write(str(i))
 		McSpread.write(", ")
 		McSpread.write(dataList[i][7])
-		time.sleep(1)
 McSpread.close()

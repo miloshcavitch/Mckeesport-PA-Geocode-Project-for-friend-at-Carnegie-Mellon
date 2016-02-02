@@ -1,14 +1,123 @@
-var addressLocations = 
-[
-	{ "address": "608 OAKWOOD ST", "latitude": "40.3259043", "longitude": "-79.8347326", "index": "5010", "repeats": "0", "additionalInfo": "Account Number: 1130175D00019    00, Owners: SCOTT ELMER  & JANNIE (W), Description: Residential, CDT: 56.27, DQT: , Interest: 1407.1, Comments: PRIOR YRS. AT JORDAN 412-345-7960"},
-	{ "address": "607 LINCOLN AVE", "latitude": "40.349634774", "longitude": "-79.8662808723", "index": "5021", "repeats": "0", "additionalInfo": "Account Number: 1120125C00012    00, Owners: RANK TABITHA S, Description: Residential, CDT: 353.93, DQT: , Interest: 684.66, Comments: PRIOR YRS. AT JORDAN 412-345-7960"},
-	{ "address": "606 OAKWOOD ST", "latitude": "40.3259043", "longitude": "-79.8347326", "index": "5034", "repeats": "0", "additionalInfo": "Account Number: 1130175D00021    00, Owners: SCOTT ELMER ROBERT & JANNIE, Description: Residential, CDT: 12.71, DQT: , Interest: 1646.93, Comments: PRIOR YRS. AT JORDAN 412-345-7960"},
-	{ "address": "606 GRANDVIEW AVE", "latitude": "40.35088445", "longitude": "-79.8375009308", "index": "5043", "repeats": "None", "additionalInfo": "Account Number: 1190001J00035    00, Owners: CHUTZ RONALD E & DOROTHY (W), Description: Residential, CDT: 2280.1, DQT: , Interest: 0, Comments: "},
-	{ "address": "604 GRANDVIEW AVE", "latitude": "40.3509053", "longitude": "-79.8375006205", "index": "5074", "repeats": "0", "additionalInfo": "Account Number: 1190001J00035000100, Owners: CHUTZ RONALD E & DOROTHY (W), Description: Residential, CDT: 3121.61, DQT: , Interest: 0, Comments: "},
-	{ "address": "603 GROSS ST", "latitude": "40.348562565", "longitude": "-79.879920804", "index": "5089", "repeats": "0", "additionalInfo": "Account Number: 1080051E00232    00, Owners: PUGLIO JULIANA L, Description: Residential, CDT: 810.72, DQT: , Interest: 1576.64, Comments: PRIOR YRS. AT JORDAN 412-345-7960"},
-	{ "address": "601 GROSS ST", "latitude": "40.348595", "longitude": "-79.879872", "index": "5115", "repeats": "0", "additionalInfo": "Account Number: 1080051E00231    00, Owners: DODARO FRANK A, Description: Commercial, CDT: 0, DQT: , Interest: 472.45, Comments: PRIOR YRS. AT JORDAN 412-345-7960"},
-	{ "address": "600 OAKWOOD ST", "latitude": "40.3259043", "longitude": "-79.8347326", "index": "5128", "repeats": "0", "additionalInfo": "Account Number: 1130175D00023    00, Owners: HOMEWOOD RESIDENTIAL LP, Description: Commercial, CDT: 1161.61, DQT: , Interest: 0, Comments: "},
-	{ "address": "6 BOSTON ST", "latitude": "40.3245797", "longitude": "-79.8340973", "index": "5166", "repeats": "0", "additionalInfo": "Account Number: 1270044H00199    00, Owners: SCA  INVESTMENTS LLC, Description: Residential, CDT: 284.96, DQT: , Interest: 0, Comments: "},
-	{ "address": "594 OAKWOOD ST", "latitude": "40.3259043", "longitude": "-79.8347326", "index": "5179", "repeats": "0", "additionalInfo": "Account Number: 1130175D00214    00, Owners: JACKSON DEBORAH, Description: Residential, CDT: 184.55, DQT: , Interest: 1926.57, Comments: PRIOR YRS. AT JORDAN 412-345-7960"},
-	{ "address": "5920 BEACON ST", "latitude": "40.3496023", "longitude": "-79.8508937", "index": "5199", "repeats": "0", "additionalInfo": "Account Number: 1140086S00028    00, Owners: COHEN ARTHUR S & LOIS, Description: Residential, CDT: 2567.91, DQT: , Interest: 0, Comments: "},
-]
+McPoints = [
+	{"inputAddress": "1 STERLING ST", "outputAddress": "1 Sterling Street, McKeesport, Allegheny County", "latitude": "40.360693", "longitude": "-79.827898", "additionalInfo": "To be added"}
+	{"inputAddress": "5 STERLING ST", "outputAddress": "5 Sterling Street, McKeesport, Allegheny County", "latitude": "40.3566948", "longitude": "-79.83624816", "additionalInfo": "To be added"}
+	{"inputAddress": "77 31ST ST", "outputAddress": "77 31st Street, McKeesport, Allegheny County", "latitude": "40.32986217", "longitude": "-79.84494968", "additionalInfo": "To be added"}
+	{"inputAddress": "100 MARKET ST", "outputAddress": "100 Market Street, McKeesport, Allegheny County", "latitude": "40.354235", "longitude": "-79.867454", "additionalInfo": "To be added"}
+	{"inputAddress": "100 5TH AVE", "outputAddress": "100 5th Avenue, East McKeesport, Allegheny County", "latitude": "40.390622", "longitude": "-79.799266", "additionalInfo": "To be added"}
+	{"inputAddress": "101 MARKET ST", "outputAddress": "101 Market Street, McKeesport, Allegheny County", "latitude": "40.354259", "longitude": "-79.867241", "additionalInfo": "To be added"}
+	{"inputAddress": "103 MARKET ST", "outputAddress": "103 Market Street, McKeesport, Allegheny County", "latitude": "40.35424531", "longitude": "-79.86723837", "additionalInfo": "To be added"}
+	{"inputAddress": "110 9TH ST", "outputAddress": "110 9th Street, McKeesport, Allegheny County", "latitude": "40.34663957", "longitude": "-79.86671371", "additionalInfo": "To be added"}
+	{"inputAddress": "111 9TH ST", "outputAddress": "111 9th Street, McKeesport, Allegheny County", "latitude": "40.34674719", "longitude": "-79.86716871", "additionalInfo": "To be added"}
+	{"inputAddress": "223 4TH AVE", "outputAddress": "223 4th Avenue, McKeesport, Allegheny County", "latitude": "40.35200512", "longitude": "-79.86650297", "additionalInfo": "To be added"}
+	{"inputAddress": "241 4TH AVE", "outputAddress": "241 4th Avenue, McKeesport, Allegheny County", "latitude": "40.35205566", "longitude": "-79.86623059", "additionalInfo": "To be added"}
+	{"inputAddress": "249 MAIN ST", "outputAddress": "249 Main Street, McKeesport, Allegheny County", "latitude": "40.33613904", "longitude": "-79.82971608", "additionalInfo": "To be added"}
+	{"inputAddress": "255 MAIN ST", "outputAddress": "255 Main Street, McKeesport, Allegheny County", "latitude": "40.3361538", "longitude": "-79.82970659", "additionalInfo": "To be added"}
+	{"inputAddress": "269 MAIN ST", "outputAddress": "269 Main Street, McKeesport, Allegheny County", "latitude": "40.33618822", "longitude": "-79.82968445", "additionalInfo": "To be added"}
+	{"inputAddress": "301 5TH AVE", "outputAddress": "301 5th Avenue, McKeesport, Allegheny County", "latitude": "40.351085", "longitude": "-79.864825", "additionalInfo": "To be added"}
+	{"inputAddress": "333 GROSS ST", "outputAddress": "333 Gross Street, McKeesport, Allegheny County", "latitude": "40.35062036", "longitude": "-79.87554887", "additionalInfo": "To be added"}
+	{"inputAddress": "426 WALNUT ST", "outputAddress": "426 Walnut Street, McKeesport, Allegheny County", "latitude": "40.35136005", "longitude": "-79.86516453", "additionalInfo": "To be added"}
+	{"inputAddress": "469 30TH ST", "outputAddress": "469 30th Street, McKeesport, Allegheny County", "latitude": "40.33396139", "longitude": "-79.84214775", "additionalInfo": "To be added"}
+	{"inputAddress": "502 WALNUT ST", "outputAddress": "502 Walnut Street, McKeesport, Allegheny County", "latitude": "40.35080771", "longitude": "-79.865038", "additionalInfo": "To be added"}
+	{"inputAddress": "516 GRANDVIEW AVE", "outputAddress": "516 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.35150024", "longitude": "-79.837496", "additionalInfo": "To be added"}
+	{"inputAddress": "518 GROSS ST", "outputAddress": "518 Gross Street, McKeesport, Allegheny County", "latitude": "40.34938268", "longitude": "-79.87900331", "additionalInfo": "To be added"}
+	{"inputAddress": "536 GROSS ST", "outputAddress": "536 Gross Street, McKeesport, Allegheny County", "latitude": "40.34926965", "longitude": "-79.87917527", "additionalInfo": "To be added"}
+	{"inputAddress": "552 LIME ST", "outputAddress": "552 Lime Street, McKeesport, Allegheny County", "latitude": "40.35979678", "longitude": "-79.831056", "additionalInfo": "To be added"}
+	{"inputAddress": "601 GROSS ST", "outputAddress": "601 Gross Street, McKeesport, Allegheny County", "latitude": "40.348595", "longitude": "-79.879872", "additionalInfo": "To be added"}
+	{"inputAddress": "603 GROSS ST", "outputAddress": "603 Gross Street, McKeesport, Allegheny County", "latitude": "40.34856257", "longitude": "-79.8799208", "additionalInfo": "To be added"}
+	{"inputAddress": "604 GRANDVIEW AVE", "outputAddress": "604 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.3509053", "longitude": "-79.83750062", "additionalInfo": "To be added"}
+	{"inputAddress": "606 GRANDVIEW AVE", "outputAddress": "606 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.35088445", "longitude": "-79.83750093", "additionalInfo": "To be added"}
+	{"inputAddress": "626 ARLINGTON AVE", "outputAddress": "626 Arlington Avenue, McKeesport, Allegheny County", "latitude": "40.34881463", "longitude": "-79.87174285", "additionalInfo": "To be added"}
+	{"inputAddress": "652 ARLINGTON AVE", "outputAddress": "652 Arlington Avenue, McKeesport, Allegheny County", "latitude": "40.34862879", "longitude": "-79.8717425", "additionalInfo": "To be added"}
+	{"inputAddress": "729 ARLINGTON AVE", "outputAddress": "729 Arlington Avenue, McKeesport, Allegheny County", "latitude": "40.34839923", "longitude": "-79.87152442", "additionalInfo": "To be added"}
+	{"inputAddress": "812 GRANDVIEW AVE", "outputAddress": "812 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34859444", "longitude": "-79.83721744", "additionalInfo": "To be added"}
+	{"inputAddress": "820 GRANDVIEW AVE", "outputAddress": "820 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34854997", "longitude": "-79.83720965", "additionalInfo": "To be added"}
+	{"inputAddress": "824 GRANDVIEW AVE", "outputAddress": "824 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34852764", "longitude": "-79.8372063", "additionalInfo": "To be added"}
+	{"inputAddress": "906 5TH AVE", "outputAddress": "906 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35166969", "longitude": "-79.8554369", "additionalInfo": "To be added"}
+	{"inputAddress": "907 EAST ST", "outputAddress": "907 East Street, McKeesport, Allegheny County", "latitude": "40.35362476", "longitude": "-79.83211302", "additionalInfo": "To be added"}
+	{"inputAddress": "932 BELLEFONTE ST", "outputAddress": "932 Bellefonte Street, McKeesport, Allegheny County", "latitude": "40.34650722", "longitude": "-79.86235967", "additionalInfo": "To be added"}
+	{"inputAddress": "940 BELLEFONTE ST", "outputAddress": "940 Bellefonte Street, McKeesport, Allegheny County", "latitude": "40.34648378", "longitude": "-79.86235533", "additionalInfo": "To be added"}
+	{"inputAddress": "1007 GRANDVIEW AVE", "outputAddress": "1007 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34711576", "longitude": "-79.83673683", "additionalInfo": "To be added"}
+	{"inputAddress": "1010 CORNELL ST", "outputAddress": "1010 Cornell Street, McKeesport, Allegheny County", "latitude": "40.34743219", "longitude": "-79.85775294", "additionalInfo": "To be added"}
+	{"inputAddress": "1011 HIGH ST", "outputAddress": "1011 High Street, McKeesport, Allegheny County", "latitude": "40.34608067", "longitude": "-79.86040433", "additionalInfo": "To be added"}
+	{"inputAddress": "1017 HIGH ST", "outputAddress": "1017 High Street, McKeesport, Allegheny County", "latitude": "40.34589898", "longitude": "-79.860401", "additionalInfo": "To be added"}
+	{"inputAddress": "1018 5TH AVE", "outputAddress": "1018 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35177367", "longitude": "-79.85436903", "additionalInfo": "To be added"}
+	{"inputAddress": "1021 LAWNDALE ST", "outputAddress": "1021 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34891972", "longitude": "-79.85526302", "additionalInfo": "To be added"}
+	{"inputAddress": "1022 LAWNDALE ST", "outputAddress": "1022 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875575", "longitude": "-79.8552513", "additionalInfo": "To be added"}
+	{"inputAddress": "1022 HIGH ST", "outputAddress": "1022 High Street, McKeesport, Allegheny County", "latitude": "40.345895", "longitude": "-79.860617", "additionalInfo": "To be added"}
+	{"inputAddress": "1024 LAWNDALE ST", "outputAddress": "1024 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875578", "longitude": "-79.85525059", "additionalInfo": "To be added"}
+	{"inputAddress": "1025 HIGH ST", "outputAddress": "1025 High Street, McKeesport, Allegheny County", "latitude": "40.34589488", "longitude": "-79.860401", "additionalInfo": "To be added"}
+	{"inputAddress": "1039 LAWNDALE ST", "outputAddress": "1039 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34891998", "longitude": "-79.85525657", "additionalInfo": "To be added"}
+	{"inputAddress": "1040 5TH AVE", "outputAddress": "1040 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35178581", "longitude": "-79.85415858", "additionalInfo": "To be added"}
+	{"inputAddress": "1042 LAWNDALE ST", "outputAddress": "1042 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875603", "longitude": "-79.85524414", "additionalInfo": "To be added"}
+	{"inputAddress": "1049 LAWNDALE ST", "outputAddress": "1049 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34892012", "longitude": "-79.85525299", "additionalInfo": "To be added"}
+	{"inputAddress": "1056 LAWNDALE ST", "outputAddress": "1056 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875624", "longitude": "-79.85523913", "additionalInfo": "To be added"}
+	{"inputAddress": "1060 LAWNDALE ST", "outputAddress": "1060 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875629", "longitude": "-79.85523769", "additionalInfo": "To be added"}
+	{"inputAddress": "1061 LAWNDALE ST", "outputAddress": "1061 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34892029", "longitude": "-79.85524869", "additionalInfo": "To be added"}
+	{"inputAddress": "1077 LAWNDALE ST", "outputAddress": "1077 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34892052", "longitude": "-79.85524296", "additionalInfo": "To be added"}
+	{"inputAddress": "1094 LAWNDALE ST", "outputAddress": "1094 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875678", "longitude": "-79.85522552", "additionalInfo": "To be added"}
+	{"inputAddress": "1100 LAWNDALE ST", "outputAddress": "1100 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875687", "longitude": "-79.85522337", "additionalInfo": "To be added"}
+	{"inputAddress": "1102 CORNELL ST", "outputAddress": "1102 Cornell Street, McKeesport, Allegheny County", "latitude": "40.34725497", "longitude": "-79.85774333", "additionalInfo": "To be added"}
+	{"inputAddress": "1108 5TH AVE", "outputAddress": "1108 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35182227", "longitude": "-79.85350806", "additionalInfo": "To be added"}
+	{"inputAddress": "1116 LAWNDALE ST", "outputAddress": "1116 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34875709", "longitude": "-79.85521764", "additionalInfo": "To be added"}
+	{"inputAddress": "1117 LAWNDALE ST", "outputAddress": "1117 Lawndale Street, McKeesport, Allegheny County", "latitude": "40.34892109", "longitude": "-79.85522864", "additionalInfo": "To be added"}
+	{"inputAddress": "1157 CORNELL ST", "outputAddress": "1157 Cornell Street, McKeesport, Allegheny County", "latitude": "40.34715468", "longitude": "-79.85752032", "additionalInfo": "To be added"}
+	{"inputAddress": "1219 COLFAX ST", "outputAddress": "1219 Colfax Street, McKeesport, Allegheny County", "latitude": "40.34795804", "longitude": "-79.85455865", "additionalInfo": "To be added"}
+	{"inputAddress": "1401 GRANDVIEW AVE", "outputAddress": "1401 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34398049", "longitude": "-79.83637243", "additionalInfo": "To be added"}
+	{"inputAddress": "1430 5TH AVE", "outputAddress": "1430 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352051", "longitude": "-79.85048918", "additionalInfo": "To be added"}
+	{"inputAddress": "1434 5TH AVE", "outputAddress": "1434 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35205707", "longitude": "-79.85045204", "additionalInfo": "To be added"}
+	{"inputAddress": "1501 5TH AVE", "outputAddress": "1501 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35224751", "longitude": "-79.85027134", "additionalInfo": "To be added"}
+	{"inputAddress": "1502 5TH AVE", "outputAddress": "1502 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35212941", "longitude": "-79.8498164", "additionalInfo": "To be added"}
+	{"inputAddress": "1507 5TH AVE", "outputAddress": "1507 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35225118", "longitude": "-79.85023972", "additionalInfo": "To be added"}
+	{"inputAddress": "1508 FEDERAL ST", "outputAddress": "1508 Federal Street, McKeesport, Allegheny County", "latitude": "40.3425496", "longitude": "-79.85024908", "additionalInfo": "To be added"}
+	{"inputAddress": "1509 5TH AVE", "outputAddress": "1509 5th Avenue, McKeesport, Allegheny County", "latitude": "40.3522524", "longitude": "-79.85022918", "additionalInfo": "To be added"}
+	{"inputAddress": "1514 FEDERAL ST", "outputAddress": "1514 Federal Street, McKeesport, Allegheny County", "latitude": "40.3425373", "longitude": "-79.85025514", "additionalInfo": "To be added"}
+	{"inputAddress": "1516 5TH AVE", "outputAddress": "1516 5th Avenue, McKeesport, Allegheny County", "latitude": "40.3521436", "longitude": "-79.84968544", "additionalInfo": "To be added"}
+	{"inputAddress": "1522 5TH AVE", "outputAddress": "1522 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35214969", "longitude": "-79.84962932", "additionalInfo": "To be added"}
+	{"inputAddress": "1605 5TH AVE", "outputAddress": "1605 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35231103", "longitude": "-79.84972337", "additionalInfo": "To be added"}
+	{"inputAddress": "1609 FEDERAL ST", "outputAddress": "1609 Federal Street, McKeesport, Allegheny County", "latitude": "40.34206363", "longitude": "-79.85025863", "additionalInfo": "To be added"}
+	{"inputAddress": "1612 5TH AVE", "outputAddress": "1612 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246648", "longitude": "-79.84848119", "additionalInfo": "To be added"}
+	{"inputAddress": "1614 5TH AVE", "outputAddress": "1614 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35247347", "longitude": "-79.84846318", "additionalInfo": "To be added"}
+	{"inputAddress": "1618 5TH AVE", "outputAddress": "1618 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35248473", "longitude": "-79.84842617", "additionalInfo": "To be added"}
+	{"inputAddress": "1635 GRANDVIEW AVE", "outputAddress": "1635 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34198547", "longitude": "-79.83657744", "additionalInfo": "To be added"}
+	{"inputAddress": "1637 GRANDVIEW AVE", "outputAddress": "1637 Grandview Avenue, McKeesport, Allegheny County", "latitude": "40.34197562", "longitude": "-79.8365785", "additionalInfo": "To be added"}
+	{"inputAddress": "1647 FEDERAL ST", "outputAddress": "1647 Federal Street, McKeesport, Allegheny County", "latitude": "40.34201692", "longitude": "-79.85028158", "additionalInfo": "To be added"}
+	{"inputAddress": "1700 5TH AVE", "outputAddress": "1700 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352861", "longitude": "-79.847398", "additionalInfo": "To be added"}
+	{"inputAddress": "1702 5TH AVE", "outputAddress": "1702 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35287972", "longitude": "-79.847326", "additionalInfo": "To be added"}
+	{"inputAddress": "1704 5TH AVE", "outputAddress": "1704 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35289844", "longitude": "-79.847254", "additionalInfo": "To be added"}
+	{"inputAddress": "1707 5TH AVE", "outputAddress": "1707 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35307647", "longitude": "-79.84723929", "additionalInfo": "To be added"}
+	{"inputAddress": "1710 5TH AVE", "outputAddress": "1710 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35295461", "longitude": "-79.847038", "additionalInfo": "To be added"}
+	{"inputAddress": "1711 LOCUST ST", "outputAddress": "1711 Locust Street, McKeesport, Allegheny County", "latitude": "40.34003848", "longitude": "-79.8574297", "additionalInfo": "To be added"}
+	{"inputAddress": "1711 5TH AVE", "outputAddress": "1711 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35311612", "longitude": "-79.84708682", "additionalInfo": "To be added"}
+	{"inputAddress": "1717 5TH AVE", "outputAddress": "1717 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35317559", "longitude": "-79.84685812", "additionalInfo": "To be added"}
+	{"inputAddress": "1718 5TH AVE", "outputAddress": "1718 5th Avenue, McKeesport, Allegheny County", "latitude": "40.3530295", "longitude": "-79.84675", "additionalInfo": "To be added"}
+	{"inputAddress": "1720 5TH AVE", "outputAddress": "1720 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35304822", "longitude": "-79.846678", "additionalInfo": "To be added"}
+	{"inputAddress": "1724 5TH AVE", "outputAddress": "1724 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35308567", "longitude": "-79.846534", "additionalInfo": "To be added"}
+	{"inputAddress": "1728 5TH AVE", "outputAddress": "1728 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35312311", "longitude": "-79.84639", "additionalInfo": "To be added"}
+	{"inputAddress": "1800 5TH AVE", "outputAddress": "1800 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35273498", "longitude": "-79.84337593", "additionalInfo": "To be added"}
+	{"inputAddress": "1813 5TH AVE", "outputAddress": "1813 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352721", "longitude": "-79.842851", "additionalInfo": "To be added"}
+	{"inputAddress": "1817 5TH AVE", "outputAddress": "1817 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352657", "longitude": "-79.8425895", "additionalInfo": "To be added"}
+	{"inputAddress": "1819 5TH AVE", "outputAddress": "1819 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352651", "longitude": "-79.842543", "additionalInfo": "To be added"}
+	{"inputAddress": "1821 5TH AVE", "outputAddress": "1821 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352638", "longitude": "-79.842306", "additionalInfo": "To be added"}
+	{"inputAddress": "1902 5TH AVE", "outputAddress": "1902 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246784", "longitude": "-79.84131453", "additionalInfo": "To be added"}
+	{"inputAddress": "1910 5TH AVE", "outputAddress": "1910 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246718", "longitude": "-79.84118865", "additionalInfo": "To be added"}
+	{"inputAddress": "1912 5TH AVE", "outputAddress": "1912 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246702", "longitude": "-79.84115718", "additionalInfo": "To be added"}
+	{"inputAddress": "1920 5TH AVE", "outputAddress": "1920 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246637", "longitude": "-79.84103131", "additionalInfo": "To be added"}
+	{"inputAddress": "1922 5TH AVE", "outputAddress": "1922 5th Avenue, McKeesport, Allegheny County", "latitude": "40.3524662", "longitude": "-79.84099984", "additionalInfo": "To be added"}
+	{"inputAddress": "1926 5TH AVE", "outputAddress": "1926 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246588", "longitude": "-79.8409369", "additionalInfo": "To be added"}
+	{"inputAddress": "1932 5TH AVE", "outputAddress": "1932 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246539", "longitude": "-79.84084249", "additionalInfo": "To be added"}
+	{"inputAddress": "1940 5TH AVE", "outputAddress": "1940 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35246473", "longitude": "-79.84071661", "additionalInfo": "To be added"}
+	{"inputAddress": "2100 5TH AVE", "outputAddress": "2100 5th Avenue, McKeesport, Allegheny County", "latitude": "40.352459", "longitude": "-79.83956408", "additionalInfo": "To be added"}
+	{"inputAddress": "2112 5TH AVE", "outputAddress": "2112 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35245875", "longitude": "-79.83955758", "additionalInfo": "To be added"}
+	{"inputAddress": "2114 5TH AVE", "outputAddress": "2114 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35245869", "longitude": "-79.8395565", "additionalInfo": "To be added"}
+	{"inputAddress": "2340 5TH AVE", "outputAddress": "2340 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35353551", "longitude": "-79.83698155", "additionalInfo": "To be added"}
+	{"inputAddress": "2358 5TH AVE", "outputAddress": "2358 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35383764", "longitude": "-79.83670301", "additionalInfo": "To be added"}
+	{"inputAddress": "2432 5TH AVE", "outputAddress": "2432 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35524462", "longitude": "-79.83497508", "additionalInfo": "To be added"}
+	{"inputAddress": "2461 5TH AVE", "outputAddress": "2461 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35483367", "longitude": "-79.83588522", "additionalInfo": "To be added"}
+	{"inputAddress": "2515 5TH AVE", "outputAddress": "2515 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35739053", "longitude": "-79.83264727", "additionalInfo": "To be added"}
+	{"inputAddress": "2519 5TH AVE", "outputAddress": "2519 5th Avenue, McKeesport, Allegheny County", "latitude": "40.3573924", "longitude": "-79.83264563", "additionalInfo": "To be added"}
+	{"inputAddress": "2521 5TH AVE", "outputAddress": "2521 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35739333", "longitude": "-79.83264481", "additionalInfo": "To be added"}
+	{"inputAddress": "3460 5TH AVE", "outputAddress": "3460 5th Avenue, McKeesport, Allegheny County", "latitude": "40.35185442", "longitude": "-79.85293767", "additionalInfo": "To be added"}
+	{"inputAddress": "3811 MAYFAIR ST", "outputAddress": "3811 Mayfair Street, McKeesport, Allegheny County", "latitude": "40.340941", "longitude": "-79.833423", "additionalInfo": "To be added"}
+	{"inputAddress": "3837 MAYFAIR ST", "outputAddress": "3837 Mayfair Street, McKeesport, Allegheny County", "latitude": "40.34097564", "longitude": "-79.8333683", "additionalInfo": "To be added"}
+	{"inputAddress": "3842 MAYFAIR ST", "outputAddress": "3842 Mayfair Street, McKeesport, Allegheny County", "latitude": "40.34062847", "longitude": "-79.83359544", "additionalInfo": "To be added"}
+	{"inputAddress": "3882 MAYFAIR ST", "outputAddress": "3882 Mayfair Street, McKeesport, Allegheny County", "latitude": "40.34084453", "longitude": "-79.83323298", "additionalInfo": "To be added"}
